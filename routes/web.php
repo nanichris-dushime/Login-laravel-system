@@ -12,7 +12,7 @@ Route::post('/login', [LoginController::class, 'login']);
 
 // Secure Dashboard (Only logged-in users can access)
 Route::get('/dashboard', function () {
-    return 'Welcome to your secure dashboard!';
+    return view('dashboard');
 })->middleware('auth');
 
 // Register Routes
